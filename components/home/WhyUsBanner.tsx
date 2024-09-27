@@ -1,4 +1,3 @@
-import {Separator} from "../../../../../Users/luzma/Downloads/kinesiomedovalle-old/kinesiomedovalle/src/components/ui/separator";
 import Image from "next/image";
 
 const data = [

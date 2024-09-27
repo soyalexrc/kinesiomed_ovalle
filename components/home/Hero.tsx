@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {Button} from "../../../../../Users/luzma/Downloads/kinesiomedovalle-old/kinesiomedovalle/src/components/ui/button";
+import {Button} from "@/components/ui/button";
 
 const data = [
     {
