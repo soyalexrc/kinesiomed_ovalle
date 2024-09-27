@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  // Uses connection pooling
+  url       = env("CMS_POSTGRES_URL")
+  // Uses direct connection, ⚠️ make sure to keep this to `POSTGRES_URL_NON_POOLING`
+  // or you'll have dangling databases from migrations
+  directUrl = env("CMS_POSTGRES_URL_NON_POOLING")
+}
+
+model ContactBar {
+  id               Int               @id @default(autoincrement())
+  proyId           String            @unique
+  name             String
+  image            String
+  createdAt        DateTime          @default(now())
+  socialMediaLinks SocialMediaLink[]
+}
+
+model SocialMediaLink {
+  id           Int         @id @default(autoincrement())
+  proyId       String      @unique
+  title        String
+  href         String
+  iconName     String
+  iconUrl      String?
+  ContactBar   ContactBar? @relation(fields: [contactBarId], references: [id])
+  contactBarId Int?
+}
+
+model Navbar {
+  id          Int          @id @default(autoincrement())
+  proyId      String       @unique
+  logoImage   String
+  navbarLinks NavbarLink[]
+}
+
+model NavbarLink {
+  id                 Int     @id @default(autoincrement())
+  proyId             String  @unique
+  title              String
+  href               String?
+  parentNavbarLinkId Int?
+  Navbar             Navbar? @relation(fields: [navbarId], references: [id])
+  navbarId           Int?
+  // NavbarLink         NavbarLink?  @relation(fields: [navbarLinkId], references: [id])
+  // NavbarLink         NavbarLink[]
+}
+
+model Footer {
+  id          Int    @id @default(autoincrement())
+  proyId      String @unique
+  logoImage   String
+  description String
+  // socialMediaLinks SocialMediaLink[]
+  // copyRightText    String
+}
