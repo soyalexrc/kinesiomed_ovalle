@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 // import localFont from "next/font/local";
 import {Archivo} from 'next/font/google'
 import "./globals.css";
-import {cn} from "../../../../Users/luzma/Downloads/kinesiomedovalle-old/kinesiomedovalle/src/lib/utils";
+import {cn} from "@/lib/utils";
 
 const archivo = Archivo({subsets: ['latin'], variable: '--font-sans'})
 
