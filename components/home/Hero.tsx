@@ -1,0 +1,59 @@
+import Image from "next/image";
+import {Button} from "../../../../../Users/luzma/Downloads/kinesiomedovalle-old/kinesiomedovalle/src/components/ui/button";
+
+const data = [
+    {
+        image: '',
+        title: 'Experts Therapists',
+        text: 'Our team of licensed and certified physiotherapists',
+        id: 1,
+    },
+    {
+        image: '',
+        title: 'Emergency Service',
+        text: 'Our emergency physiotherapy services are designed to address',
+        id: 2,
+    },
+    {
+        image: '',
+        title: 'Free Consultant',
+        text: 'Our mission is to enhance the quality of life of our patients',
+        id: 3,
+    },
+
+]
+
+export function Hero() {
+    return (
+        <>
+            <div className="w-full h-[750px] relative flex items-center justify-between">
+                <Image src="/hero.jpg" fill alt="hero" objectFit="cover"/>
+                <div className="absolute top-0 left-0 w-full h-full bg-brand/50"/>
+                <div className="z-20 text-white flex flex-col items-center w-full">
+                    <span className="bg-brandSecondary px-4 py-2 rounded-full mb-8">Welcome to Kinesiomed</span>
+                    <h1 className="text-8xl text-center max-w-[680px]">Destination For Relief & Welness</h1>
+                    <p className="max-w-[680px] mt-12 mb-8">
+                        It is a long established fact that a reader will be distracted the readable content of a page
+                        when
+                        looking at layout the point of using lorem the Ipsum less normal distribution of letters.
+                    </p>
+                    <div className="flex items-center gap-4">
+                        <Button className="rounded-full px-6 py-4">Explore Services</Button>
+                        <Button className="rounded-full px-6 py-4">Book appointment</Button>
+                    </div>
+                </div>
+            </div>
+            <div className="grid grid-cols-12 gap-8 px-16 py-12 text-white bg-brand">
+                {data.map((item, index) => (
+                    <div key={item.id} className={`col-span-12 md:col-span-6 lg:col-span-4 flex gap-4 p-4 items-start ${index === 1 && 'border-l-none md:border-l-[1px] border-r-none  lg:border-r-[1px]'}`}>
+                        <div className="min-h-[64px] min-w-[64px] bg-brandSecondary rounded-md" />
+                        <div>
+                            <h3 className="text-xl font-bold">{item.title}</h3>
+                            <p>{item.text}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
+    )
+}
