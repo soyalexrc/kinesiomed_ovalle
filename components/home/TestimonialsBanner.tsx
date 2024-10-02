@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {Dot, Star} from "lucide-react";
+import {Star} from "lucide-react";
 
 const reviews = [
     {
