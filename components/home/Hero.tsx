@@ -26,12 +26,12 @@ const data = [
 export function Hero() {
     return (
         <>
-            <div className="w-full h-[750px] relative flex items-center justify-between">
+            <div className="w-full h-[750px] relative flex items-center justify-between px-10 md:px-0">
                 <Image src="/hero.jpg" fill alt="hero" objectFit="cover"/>
                 <div className="absolute top-0 left-0 w-full h-full bg-brand/50"/>
                 <div className="z-20 text-white flex flex-col items-center w-full">
                     <span className="bg-brandSecondary px-4 py-2 rounded-full mb-8">Welcome to Kinesiomed</span>
-                    <h1 className="text-8xl text-center max-w-[680px]">Destination For Relief & Welness</h1>
+                    <h1 className="text-4xl sm:text-6xl md:text-8xl text-center max-w-[680px]">Destination For Relief & Welness</h1>
                     <p className="max-w-[680px] mt-12 mb-8">
                         It is a long established fact that a reader will be distracted the readable content of a page
                         when
@@ -43,16 +43,19 @@ export function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-12 gap-8 px-16 py-12 text-white bg-brand">
-                {data.map((item, index) => (
-                    <div key={item.id} className={`col-span-12 md:col-span-6 lg:col-span-4 flex gap-4 p-4 items-start ${index === 1 && 'border-l-none md:border-l-[1px] border-r-none  lg:border-r-[1px]'}`}>
-                        <div className="min-h-[64px] min-w-[64px] bg-brandSecondary rounded-md" />
-                        <div>
-                            <h3 className="text-xl font-bold">{item.title}</h3>
-                            <p>{item.text}</p>
+            <div className="flex justify-center bg-brand">
+                <div className="grid grid-cols-12 gap-8 px-8 md:px-16 py-12 text-white  max-w-[1400px]">
+                    {data.map((item, index) => (
+                        <div key={item.id}
+                             className={`col-span-12 md:col-span-6 lg:col-span-4 flex gap-4 p-4 items-start ${index === 1 && 'border-l-none md:border-l-[1px] border-r-none  lg:border-r-[1px]'}`}>
+                            <div className="min-h-[64px] min-w-[64px] bg-brandSecondary rounded-md"/>
+                            <div>
+                                <h3 className="text-xl font-bold">{item.title}</h3>
+                                <p>{item.text}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </>
     )

@@ -48,7 +48,7 @@ const socialIcons = [
 
 export function ContactBar() {
     return (
-        <div className="bg-brand text-white min-h-[40px] flex justify-center md:justify-between items-center px-4">
+        <div className="bg-brand text-white min-h-[40px] flex justify-center lg:justify-between items-center px-4">
             <div className="flex items-center gap-8">
                 {
                     contactBarItems.map((item, index) => (
@@ -58,7 +58,7 @@ export function ContactBar() {
                     ))
                 }
             </div>
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-4">
                 {
                     socialIcons.map((item) => (
                         <span className="" key={item.id}>

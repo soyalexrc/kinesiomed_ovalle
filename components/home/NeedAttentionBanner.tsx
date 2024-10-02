@@ -50,12 +50,12 @@ const data = [
 
 export function NeedAttentionBanner() {
     return (
-        <div className="relative h-[640px] w-full flex items-center justify-center">
+        <div className="relative h-[1300px] md:h-[640px] w-full flex items-center justify-center">
             <Image src="/need-attention.jpg" objectFit="cover" fill alt=""/>
             <div className="absolute top-0 left-0 w-full h-full bg-brand/80"/>
-            <div className="z-20 flex flex-col items-center max-w-[970px]">
+            <div className="z-20 px-10 md:px-0 flex flex-col items-center max-w-[970px]">
                 <span className="rounded-full bg-brandSecondary px-4 py-2 text-white">Need Attention</span>
-                <h3 className="text-7xl text-white my-10">Where Do You Need Attention?</h3>
+                <h3 className="text-3xl md:text-6xl text-white my-10 text-center">Where Do You Need Attention?</h3>
                 <p className="text-md text-white text-center">
                     We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy
                     services are designed to provide prompt and effective care to help you manage.

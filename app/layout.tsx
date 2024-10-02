@@ -4,7 +4,7 @@ import {Archivo} from 'next/font/google'
 import "./globals.css";
 import {cn} from "@/lib/utils";
 
-const archivo = Archivo({subsets: ['latin'], variable: '--font-sans'})
+const archivo = Archivo({subsets: ['latin']})
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -33,7 +33,7 @@ export default function RootLayout({
     return (
         <html lang="es">
         <body>
-        <main className={cn('min-h-screen bg-background font-sans antialiased', archivo.variable)}>
+        <main className={cn('min-h-screen bg-background antialiased', archivo.className)}>
             {children}
         </main>
         </body>

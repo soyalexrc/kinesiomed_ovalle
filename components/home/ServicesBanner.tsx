@@ -49,37 +49,39 @@ const data = [
 
 export function ServicesBanner() {
     return (
-        <div className="px-20 py-24">
-            <span className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Therapist Team</span>
-            <div className="mt-6 flex justify-between ">
-                <div>
-                    <h3 className="text-6xl text-brandSecondary ">We Provide <span
-                        className="text-brand"> The Best</span></h3>
-                    <h3 className="text-6xl text-brand">Services</h3>
-                </div>
-                <Button className="rounded-full">
-                    View All Services
-                </Button>
-            </div>
-
-            <div className="grid grid-cols-4 gap-6 mt-12">
-                {data.map((item) => (
-                    <div key={item.id}
-                         className={`border-2 border-brand/10 rounded-3xl p-6 ${item.isCta && 'col-span-2 flex flex-col items-center'}`}>
-                        <div className="w-[52px] h-[52px] rounded-xl bg-brandSecondary/10"/>
-                        <h5 className="text-brand text-xl my-4">{item.title}</h5>
-                        <p className="text-md">{item.text}</p>
-                        {
-                            item.isCta ? (
-                                <Button className="mt-4">{item.ctaText}</Button>
-                            ) : (
-                                <div className="w-[36px] mt-4 h-[36px] rounded-full bg-brandSecondary/10"/>
-
-                            )
-
-                        }
+        <div className="flex justify-center">
+            <div className="px-10 md:px-20 py-24 max-w-[1400px]">
+                <span className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Therapist Team</span>
+                <div className="mt-6 flex justify-between flex-wrap">
+                    <div>
+                        <h3 className="text-3xl md:text-6xl text-brandSecondary ">We Provide <span
+                            className="text-brand"> The Best</span></h3>
+                        <h3 className="text-3xl md:text-6xl text-brand">Services</h3>
                     </div>
-                ))}
+                    <Button className="rounded-full">
+                        View All Services
+                    </Button>
+                </div>
+
+                <div className="grid grid-cols-4 gap-6 mt-12">
+                    {data.map((item) => (
+                        <div key={item.id}
+                             className={`border-2 border-brand/10 rounded-3xl p-6 ${item.isCta ? 'col-span-4 md:col-span-2 flex flex-col items-center' : 'col-span-4 sm:col-span-2 md:col-span-1'}`}>
+                            <div className="w-[52px] h-[52px] rounded-xl bg-brandSecondary/10"/>
+                            <h5 className="text-brand text-xl my-4">{item.title}</h5>
+                            <p className="text-md">{item.text}</p>
+                            {
+                                item.isCta ? (
+                                    <Button className="mt-4">{item.ctaText}</Button>
+                                ) : (
+                                    <div className="w-[36px] mt-4 h-[36px] rounded-full bg-brandSecondary/10"/>
+
+                                )
+
+                            }
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
