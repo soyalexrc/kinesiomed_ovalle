@@ -33,7 +33,7 @@ export default function RootLayout({
     return (
         <html lang="es">
         <body>
-        <main className={cn('min-h-screen bg-background antialiased', archivo.className)}>
+        <main className={cn('min-h-screen bg-background antialiased overflow-x-hidden', archivo.className)}>
             {children}
         </main>
         </body>

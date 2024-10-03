@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {Menu} from "lucide-react";
+import MenuButton from "@/app/(web)/MenuButton";
 
 const navbarItems = [
     {
@@ -44,9 +45,7 @@ export function Navbar() {
             <Button variant="brandedSecondary" className="hidden md:block rounded-full">
                 +(123) 827-1827
             </Button>
-            <Button variant="branded" size="icon">
-                <Menu />
-            </Button>
+            <MenuButton />
         </div>
     )
 }

@@ -8,10 +8,11 @@ import {
     WhyUsBanner,
     TestimonialsBanner
 } from "@/components/home";
+import WhatsAppButton from "@/components/layout/WhatAppButton";
 
 export default function Home() {
     return (
-        <div>
+        <div className="relative">
             <Hero />
             <AboutUsBanner />
             <ServicesBanner />
@@ -21,6 +22,7 @@ export default function Home() {
             <TeamBanner />
             <TestimonialsBanner />
             <BlogBanner />
+            <WhatsAppButton />
         </div>
     )
 }
