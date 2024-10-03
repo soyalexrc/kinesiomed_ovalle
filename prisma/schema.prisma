@@ -10,7 +10,7 @@ datasource db {
   // Uses direct connection, ⚠️ make sure to keep this to `POSTGRES_URL_NON_POOLING`
   // or you'll have dangling databases from migrations
   directUrl = env("POSTGRES_URL_NON_POOLING")
-  schemas   = ["kinesiomed"]
+  schemas   = ["kinesiomed", "layout"]
 }
 
 model ContactBar {
@@ -21,7 +21,7 @@ model ContactBar {
   createdAt        DateTime          @default(now())
   socialMediaLinks SocialMediaLink[]
 
-  @@schema("kinesiomed")
+  @@schema("layout")
 }
 
 model SocialMediaLink {
@@ -34,7 +34,7 @@ model SocialMediaLink {
   ContactBar   ContactBar? @relation(fields: [contactBarId], references: [id])
   contactBarId Int?
 
-  @@schema("kinesiomed")
+  @@schema("layout")
 }
 
 model Navbar {
@@ -43,7 +43,7 @@ model Navbar {
   logoImage   String
   navbarLinks NavbarLink[]
 
-  @@schema("kinesiomed")
+  @@schema("layout")
 }
 
 model NavbarLink {
@@ -57,7 +57,7 @@ model NavbarLink {
 
   // NavbarLink         NavbarLink?  @relation(fields: [navbarLinkId], references: [id])
   // NavbarLink         NavbarLink[]
-  @@schema("kinesiomed")
+  @@schema("layout")
 }
 
 model Footer {
@@ -68,5 +68,5 @@ model Footer {
 
   // socialMediaLinks SocialMediaLink[]
   // copyRightText    String
-  @@schema("kinesiomed")
+  @@schema("layout")
 }
