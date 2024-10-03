@@ -54,6 +54,7 @@ model NavbarLink {
   parentNavbarLinkId Int?
   Navbar             Navbar? @relation(fields: [navbarId], references: [id])
   navbarId           Int?
+
   // NavbarLink         NavbarLink?  @relation(fields: [navbarLinkId], references: [id])
   // NavbarLink         NavbarLink[]
   @@schema("kinesiomed")
@@ -64,6 +65,7 @@ model Footer {
   proyId      String @unique
   logoImage   String
   description String
+
   // socialMediaLinks SocialMediaLink[]
   // copyRightText    String
   @@schema("kinesiomed")
