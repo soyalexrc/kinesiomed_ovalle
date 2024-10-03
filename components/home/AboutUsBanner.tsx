@@ -4,8 +4,8 @@ import {Separator} from "@/components/ui/separator";
 export function AboutUsBanner() {
     return (
         <div className="flex justify-center">
-            <div className="px-10 md:px-20 py-24 grid grid-cols-12 gap-5 md:gap-10 items-center max-w-[1400px]">
-                <div className="relative col-span-12 md:col-span-5 h-[650px]">
+            <div className="px-5 md:px-20 py-24 grid grid-cols-12 gap-5 md:gap-10 items-center max-w-[1400px]">
+                <div className="relative col-span-12 md:col-span-5 h-[380px] md:h-[650px]">
                     <Image src="/about-img.jpg" fill alt="about image" className="rounded-xl" objectFit="cover"/>
                 </div>
                 <div className="col-span-12 md:col-span-7">

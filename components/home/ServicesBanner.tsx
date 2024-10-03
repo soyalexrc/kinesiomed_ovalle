@@ -50,7 +50,7 @@ const data = [
 export function ServicesBanner() {
     return (
         <div className="flex justify-center">
-            <div className="px-10 md:px-20 py-24 max-w-[1400px]">
+            <div className="px-5 md:px-20 py-24 max-w-[1400px]">
                 <span className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Therapist Team</span>
                 <div className="mt-6 flex justify-between flex-wrap">
                     <div>

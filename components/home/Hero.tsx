@@ -26,18 +26,18 @@ const data = [
 export function Hero() {
     return (
         <>
-            <div className="w-full h-[750px] relative flex items-center justify-between px-10 md:px-0">
+            <div className="w-full h-[500px] md:h-[750px] relative flex items-center justify-between px-10 md:px-0">
                 <Image src="/hero.jpg" fill alt="hero" objectFit="cover"/>
                 <div className="absolute top-0 left-0 w-full h-full bg-brand/50"/>
                 <div className="z-20 text-white flex flex-col items-center w-full">
                     <span className="bg-brandSecondary px-4 py-2 rounded-full mb-8">Welcome to Kinesiomed</span>
                     <h1 className="text-4xl sm:text-6xl md:text-8xl text-center max-w-[680px]">Destination For Relief & Welness</h1>
-                    <p className="max-w-[680px] mt-12 mb-8">
+                    <p className="max-w-[680px] mt-12 mb-8 text-center">
                         It is a long established fact that a reader will be distracted the readable content of a page
                         when
                         looking at layout the point of using lorem the Ipsum less normal distribution of letters.
                     </p>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                         <Button className="rounded-full px-6 py-4">Explore Services</Button>
                         <Button className="rounded-full px-6 py-4">Book appointment</Button>
                     </div>

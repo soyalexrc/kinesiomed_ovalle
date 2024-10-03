@@ -31,7 +31,7 @@ const stats = [
 export function ProudBanner() {
     return (
         <div className="flex justify-center  bg-brandSecondary/10">
-            <div className="px-10 md:px-20 py-24 max-w-[1400px] grid grid-cols-2 gap-12">
+            <div className="px-5 md:px-20 py-24 max-w-[1400px] grid grid-cols-2 gap-12">
                 <div className="grid gap-4 grid-cols-2 col-span-2 md:col-span-1">
                     <div className="relative h-[340px] md:h-[620px]">
                         <Image src="/proud-1.jpg" fill alt="proud-1" className="rounded-xl" objectFit="cover"/>
