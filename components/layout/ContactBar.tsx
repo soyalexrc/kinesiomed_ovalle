@@ -1,3 +1,5 @@
+import {Facebook, Instagram, Linkedin, Twitter, Phone, Youtube} from "lucide-react";
+
 const contactBarItems = [
     {
         id: 1,
@@ -23,32 +25,32 @@ const socialIcons = [
     {
         id: 1,
         title: 'Facebook',
-        icon: '',
+        icon: <Facebook />,
         href: ''
     },
     {
         id: 2,
         title: 'Twitter',
-        icon: '',
+        icon: <Twitter />,
         href: ''
     },
     {
         id: 3,
         title: 'Instagram',
-        icon: '',
+        icon: <Instagram />,
         href: ''
     },
     {
         id: 4,
         title: 'Youtube',
-        icon: '',
+        icon: <Youtube />,
         href: ''
     }
 ]
 
 export function ContactBar() {
     return (
-        <div className="bg-brand text-white min-h-[40px] flex justify-center lg:justify-between items-center px-4">
+        <div className="bg-brand text-white min-h-[40px] flex justify-center lg:justify-between items-center px-4 fixed top-0 w-full z-40">
             <div className="flex items-center gap-8">
                 {
                     contactBarItems.map((item, index) => (
@@ -62,7 +64,8 @@ export function ContactBar() {
                 {
                     socialIcons.map((item) => (
                         <span className="" key={item.id}>
-                        {item.title}
+                            {item.icon}
+                        {/*{item.title}*/}
                     </span>
                     ))
                 }

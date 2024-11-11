@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import {NavbarItem} from "@/lib/interfaces/Menu";
 
-export default function MenuButton() {
+export default function MenuButton({items}: {items: NavbarItem[]}) {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleMenu = () => setIsOpen(!isOpen)
@@ -41,18 +43,14 @@ export default function MenuButton() {
                         <X className="h-6 w-6 text-white" />
                     </Button>
                     <ul className="space-y-4 mt-12 mb-4">
-                        <li>
-                            <a href="#" className="block py-2 text-lg hover:text-primary" onClick={closeMenu}>Inicio</a>
-                        </li>
-                        <li>
-                            <a href="#" className="block py-2 text-lg hover:text-primary" onClick={closeMenu}>Acerca de nosotros</a>
-                        </li>
-                        <li>
-                            <a href="#" className="block py-2 text-lg hover:text-primary" onClick={closeMenu}>Servicios</a>
-                        </li>
-                        <li>
-                            <a href="#" className="block py-2 text-lg hover:text-primary" onClick={closeMenu}>Contactanos</a>
-                        </li>
+                        {
+                            items.map(item => (
+                                <li key={item.id}>
+                                    <Link href={item.href}  className="block py-2 text-lg hover:text-primary"
+                                       onClick={closeMenu}>{item.title}</Link>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
             </nav>
