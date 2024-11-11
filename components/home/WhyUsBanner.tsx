@@ -4,38 +4,38 @@ const data = [
     {
         id: 1,
         icon : '',
-        title: 'Experienced Team',
-        text: 'We understand that injuries and acute pain can unexpectedly.'
+        title: 'Equipo Experimentado',
+        text: 'Nuestro equipo dedicado de terapeutas altamente calificados aporta años de experiencia a cada interacción con el paciente.'
     },
     {
         id: 2,
         icon : '',
-        title: 'Advanced Technology',
-        text: 'We understand that injuries and acute pain can unexpectedly.'
+        title: 'Tecnologia Avanzada',
+        text: 'Utilizamos equipos y técnicas de última generación para brindar tratamientos efectivos y eficientes.'
     },
     {
         id: 3,
         icon : '',
-        title: 'Patient-Centered Approach',
-        text: 'We understand that injuries and acute pain can unexpectedly.'
+        title: 'Enfoque Centrado en el Paciente',
+        text: 'Su comodidad y bienestar son nuestras principales prioridades. Adaptamos nuestros tratamientos a sus necesidades específicas.'
     },
     {
         id: 4,
         icon : '',
-        title: 'Convenient And Accessible',
-        text: 'We understand that injuries and acute pain can unexpectedly.'
+        title: 'Cómodo y Accesible',
+        text: 'Nuestra clínica está convenientemente ubicada y ofrece una programación de citas flexible para adaptarse a su ajetreado estilo de vida.'
     },
     {
         id: 5,
         icon : '',
-        title: 'Expertise And Experience',
-        text: 'We understand that injuries and acute pain can unexpectedly.'
+        title: 'Experiencia y Conocimientos',
+        text: 'Nuestros terapeutas se especializan en una amplia gama de condiciones, garantizando que usted reciba atención experta.'
     },
     {
         id: 6,
         icon : '',
-        title: 'Community Involvement',
-        text: 'We understand that injuries and acute pain can unexpectedly.'
+        title: 'Participación Comunitaria',
+        text: 'Estamos comprometidos a retribuir a nuestra comunidad y promover iniciativas de salud y bienestar.'
     },
 
 ]
@@ -45,11 +45,11 @@ export function WhyUsBanner() {
         <div className="flex justify-center">
             <div className="px-5 md:px-20 py-24 max-w-[1400px] w-full">
                 <div className="flex flex-col items-center ">
-                    <span className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Why Us</span>
+                    <span className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">¿Por qué nosotros?</span>
                     <div className="flex flex-col items-center my-12">
-                        <h3 className="text-3xl md:text-6xl text-brandSecondary">Excellence In <span
-                            className="text-brand">Care And</span></h3>
-                        <h3 className="text-brand text-3xl md:text-6xl"> Rehabilitation</h3>
+                        <h3 className="text-3xl md:text-6xl text-brandSecondary">Excelencia en <span
+                            className="text-brand">Cuidado y </span></h3>
+                        <h3 className="text-brand text-3xl md:text-6xl"> Rehabilitación</h3>
                     </div>
                 </div>
 

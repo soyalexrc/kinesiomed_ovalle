@@ -5,8 +5,8 @@ export default function WhatsAppButton() {
 
     const handleWhatsAppClick = () => {
         const whatsappUrl = "https://wa.me/"; // Base URL
-        const phoneNumber = "+51917902604"; // Replace with your phone number
-        const message = "?text=Hi%20there!"; // Optional pre-filled message
+        const phoneNumber = "+56942757447"; // Replace with your phone number
+        const message = "?text=Hola! Me gustaria saber mas informacion sobre sus servicios."; // Optional pre-filled message
         const completeUrl = `${whatsappUrl}${phoneNumber}${message}`;
         window.open(completeUrl, "_blank"); // Open in a new tab
     };

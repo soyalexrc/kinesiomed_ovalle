@@ -5,26 +5,26 @@ const reviews = [
     {
         id: 1,
         score: 5,
-        text: '"We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy services are designed to provide prompt."',
+        text: '"La atención experta de Kinesiomed Ovalle me ayudó a recuperarme rápidamente de una lesión reciente. Muy recomendable."',
         image: '',
-        name: 'Jane Smith',
-        role: 'Marathon Runner'
+        name: 'Dr. Carlos Ramirez',
+        role: 'Cirujano'
     },
     {
         id: 2,
-        score: 1,
-        text: '"We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy services are designed to provide prompt."',
+        score: 5,
+        text: '"Alivió mi dolor de espalda crónico y mejoró mi bienestar general. Una gran experiencia."',
         image: '',
-        name: 'Joel Miller',
-        role: 'Marathon '
+        name: 'Sofia Perez',
+        role: 'Profesora'
     },
     {
         id: 3,
-        score: 4,
-        text: '"We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy services are designed to provide prompt."',
+        score: 5,
+        text: '"Mejoró su postura y alivió el dolor. Personal amable y capacitado."',
         image: '',
-        name: 'Jane Smith',
-        role: 'Marathon Runner'
+        name: 'Pablo Martinez',
+        role: 'Consultor de TI'
     },
 
 ]
@@ -35,22 +35,25 @@ export function TestimonialsBanner() {
             <Image src="/testimonial-bg.svg" objectFit="cover" fill alt=""/>
             <div className="absolute top-0 left-0 w-full h-full bg-brand/30"/>
             <div className="z-20 flex px-10 md:px-0 flex-col items-center max-w-[970px]">
-                <span className="rounded-full bg-brandSecondary px-4 py-2 text-white">Review</span>
-                <h3 className="text-3xl md:text-6xl text-white my-10">What <span className="text-brand">Our Clients Say</span></h3>
+                <span className="rounded-full bg-brandSecondary px-4 py-2 text-white">Reseñas</span>
+                <h3 className="text-3xl md:text-6xl text-white my-10">Lo que <span className="text-brand">Dicen Nuestros Pacientes</span>
+                </h3>
                 <p className="text-md text-white text-center">
-                    We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy
-                    services are designed to provide prompt and effective care to help you manage.
-                </p>
+                    Experimente la diferencia de la atención personalizada, la tecnología avanzada y el compromiso con
+                    su bienestar. Nuestros terapeutas capacitados están dedicados a ayudarlo a lograr una salud y una
+                    recuperación óptimas. </p>
 
                 <div className="grid grid-cols-12 gap-8 mt-10 w-full">
                     {
                         reviews.map(testimonial => (
-                            <div key={testimonial.id} className="col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl p-8">
+                            <div key={testimonial.id}
+                                 className="col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl p-8 flex flex-col justify-between">
                                 <div className="flex gap-2">
                                     {
                                         Array.from(Array(5).keys())
                                             .map((score) => (
-                                                <Star size={18} key={score} className={`text-yellow-500 ${score < testimonial.score && 'fill-yellow-500'}`} />
+                                                <Star size={18} key={score}
+                                                      className={`text-yellow-500 ${score < testimonial.score && 'fill-yellow-500'}`}/>
                                             ))
                                     }
                                 </div>
@@ -71,14 +74,14 @@ export function TestimonialsBanner() {
                         ))
                     }
                 </div>
-                <div className="absolute flex gap-2" style={{ bottom: '5%', left: '50%', transform: 'translateX(-50%)' }}>
-                    {
-                        Array.from(Array(4).keys())
-                            .map((score) => (
-                                <div key={score} className="w-[10px] h-[10px] bg-brand rounded-full" />
-                            ))
-                    }
-                </div>
+                {/*<div className="absolute flex gap-2" style={{bottom: '5%', left: '50%', transform: 'translateX(-50%)'}}>*/}
+                {/*    {*/}
+                {/*        Array.from(Array(4).keys())*/}
+                {/*            .map((score) => (*/}
+                {/*                <div key={score} className="w-[10px] h-[10px] bg-brand rounded-full"/>*/}
+                {/*            ))*/}
+                {/*    }*/}
+                {/*</div>*/}
             </div>
         </div>
     )

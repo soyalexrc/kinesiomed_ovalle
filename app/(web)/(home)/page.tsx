@@ -1,10 +1,8 @@
 import {
-    AboutUsBanner, BlogBanner,
+    AboutUsBanner,
     Hero,
-    NeedAttentionBanner,
     ProudBanner,
     ServicesBanner,
-    TeamBanner,
     WhyUsBanner,
     TestimonialsBanner
 } from "@/components/home";
@@ -18,10 +16,10 @@ export default function Home() {
             <ServicesBanner />
             <ProudBanner />
             <WhyUsBanner />
-            <NeedAttentionBanner />
-            <TeamBanner />
+            {/*<NeedAttentionBanner />*/}
+            {/*<TeamBanner />*/}
             <TestimonialsBanner />
-            <BlogBanner />
+            {/*<BlogBanner />*/}
             <WhatsAppButton />
         </div>
     )
