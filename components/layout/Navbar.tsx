@@ -34,7 +34,7 @@ const navbarItems: NavbarItem[] = [
 export function Navbar() {
     return (
         <div className="flex items-center justify-between px-4 py-6 mt-[32px] shadow-md">
-            <Image src="/logo.svg" width={150} height={50} alt="Kinesiomed icon" />
+            <Image src="/kinesiomed-logo.svg" width={150} height={50} alt="Kinesiomed icon" />
             <div className="hidden md:flex items-center gap-8">
                 {navbarItems.map(item => (
                     <Link href={item.href} key={item.id}>
@@ -43,7 +43,9 @@ export function Navbar() {
                 ))}
             </div>
             <Button variant="brandedSecondary" className="hidden md:block rounded-full">
-                +(123) 827-1827
+                <Link href="tel:+56942757447">
+                    +(56) 9 4275 7447
+                </Link>
             </Button>
             <MenuButton items={navbarItems} />
         </div>

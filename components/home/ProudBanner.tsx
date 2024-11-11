@@ -2,28 +2,28 @@ import Image from "next/image";
 import {Separator} from "@/components/ui/separator";
 
 const bullets = [
-    { id: 1, text: "We understand that injuries." },
-    { id: 2, text:  "Can happen unexpectedly. Our emergency."},
-    { id: 3, text: "We understand that injuries." }
+    {id: 1, text: "Planes de tratamiento personalizados."},
+    {id: 2, text: "Resultados tangibles."},
+    {id: 3, text: "Equipo de expertos."}
 ]
 
 const stats = [
     {
         id: 1,
-        title: '78+',
-        text: 'Skilled Therapist',
+        title: '1200+',
+        text: 'Pacientes tratados anualmente',
         icon: '',
     },
     {
         id: 2,
         title: '98%',
-        text: 'Success Rate',
+        text: 'Tasa de mejora',
         icon: '',
     },
     {
         id: 3,
-        title: '950+',
-        text: 'Patients Treated',
+        title: '700+',
+        text: 'Planes de tratamiento exitosos',
         icon: '',
     },
 ]
@@ -42,15 +42,19 @@ export function ProudBanner() {
                 </div>
                 <div className="col-span-2 md:col-span-1">
                     <span
-                        className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Solution To Your Plan</span>
+                        className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Solucion a tu plan</span>
                     <div className="my-12">
-                        <h3 className="text-3xl md:text-6xl text-brandSecondary">We Proudly <span className="text-brand">Give</span>
+                        <h3 className="text-3xl md:text-6xl text-brandSecondary">Nos orgullece <span
+                            className="text-brand">dar</span>
                         </h3>
-                        <h3 className="text-3xl md:text-6xl text-brand">Quality Treatment</h3>
+                        <h3 className="text-3xl md:text-6xl text-brand">Tratamientos de calidad</h3>
                     </div>
                     <p className="text-md mb-12">
-                        We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy
-                        services are designed to provide prompt and effective care to help you manage.
+                        Cada persona es única, y así también lo son sus necesidades. En Kinesiomed Ovalle, diseñamos
+                        planes de tratamiento personalizados para abordar tus dolencias de manera eficaz. Nuestro
+                        objetivo es brindarte la solución más adecuada para que puedas recuperar tu movilidad y
+                        bienestar lo antes posible. Con tratamientos de calidad y un seguimiento cercano, te ayudaremos
+                        a alcanzar tus metas
                     </p>
 
                     <ul className="flex flex-col gap-4">

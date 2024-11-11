@@ -9,36 +9,36 @@ export function AboutUsBanner() {
                     <Image src="/about-img.jpg" fill alt="about image" className="rounded-xl" objectFit="cover"/>
                 </div>
                 <div className="col-span-12 md:col-span-7">
-                    <span className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">About Us</span>
-                    <h2 className="text-3xl md:text-6xl mt-5 text-brand">We Are The Best For</h2>
-                    <h2 className="text-3xl md:text-6xl text-brandSecondary">Physiotherapy</h2>
+                    <span className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Acerca de nosotros</span>
+                    <h2 className="text-3xl md:text-6xl mt-5 text-brand">Nosotros somos los mejores en</h2>
+                    <h2 className="text-3xl md:text-6xl text-brandSecondary">Fisioterapia</h2>
                     <p className="text-md my-6">
-                        We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy
-                        services are designed to provide prompt and effective care to help you manage pain, prevent
-                        further
-                        injury, and start your recovery process as quickly as possible.
+                        Somos apasionados por tu bienestar. Con años de experiencia en el campo de la fisioterapia,
+                        nuestro equipo altamente capacitado está dedicado a brindarte un cuidado personalizado y eficaz.
+                        Utilizando las técnicas más avanzadas y un enfoque integral, te ayudaremos a alcanzar tus
+                        objetivos de recuperación y mejorar tu calidad de vida.
                     </p>
-                    <div className="grid md:grid-cols-2 gap-6 md:gap-12">
-                        <div className="col-span-2 md:col-span-1">
-                            Nutrition Strategies
-                        </div>
-                        <div className="col-span-2 md:col-span-1">
-                            Be Pro Active
-                        </div>
-                        <div className="col-span-2 md:col-span-1">
-                            Workout Routines
-                        </div>
-                        <div className="col-span-2 md:col-span-1">
-                            Support & Motivation
-                        </div>
-                        <Separator className="col-span-2"/>
-                        <div className="col-span-2 md:col-span-1">
-                            Workout Routines
-                        </div>
-                        <div className="col-span-2 md:col-span-1">
-                            Support & Motivation
-                        </div>
-                    </div>
+                    {/*<div className="grid md:grid-cols-2 gap-6 md:gap-12">*/}
+                    {/*    <div className="col-span-2 md:col-span-1">*/}
+                    {/*        Nutrition Strategies*/}
+                    {/*    </div>*/}
+                    {/*    <div className="col-span-2 md:col-span-1">*/}
+                    {/*        Be Pro Active*/}
+                    {/*    </div>*/}
+                    {/*    <div className="col-span-2 md:col-span-1">*/}
+                    {/*        Workout Routines*/}
+                    {/*    </div>*/}
+                    {/*    <div className="col-span-2 md:col-span-1">*/}
+                    {/*        Support & Motivation*/}
+                    {/*    </div>*/}
+                    {/*    <Separator className="col-span-2"/>*/}
+                    {/*    <div className="col-span-2 md:col-span-1">*/}
+                    {/*        Workout Routines*/}
+                    {/*    </div>*/}
+                    {/*    <div className="col-span-2 md:col-span-1">*/}
+                    {/*        Support & Motivation*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </div>

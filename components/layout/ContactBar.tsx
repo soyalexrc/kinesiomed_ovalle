@@ -1,23 +1,24 @@
-import {Facebook, Instagram, Linkedin, Twitter, Phone, Youtube} from "lucide-react";
+import {Facebook, Instagram, Phone} from "lucide-react";
+import Link from "next/link";
 
 const contactBarItems = [
     {
         id: 1,
-        title: '+(123) 698-5312',
-        icon: '',
-        href: ''
+        title: '+(56) 9 4275 7447',
+        icon: <Phone /> ,
+        href: 'tel:+56942757447'
     },
     {
         id: 2,
-        title: 'info@domain.com',
+        title: 'contacto@kinesiomedovalle.com',
         icon: '',
-        href: ''
+        href: 'mailto:contacto@kinesiomedovalle.com'
     },
     {
         id: 3,
-        title: '24/11 Robert Road, New York, USA',
+        title: 'Av. Manuel Peñafiel 1480, oficina 420',
         icon: '',
-        href: ''
+        href: 'https://www.google.com/maps/place/Av.+Manuel+Pe%C3%B1afiel+Olivares+1480,+1840000+Ovalle,+Coquimbo,+Chile/@-30.5776132,-71.1883604,17z/data=!4m6!3m5!1s0x968fcab5ad8384fb:0x2542ea5874c314fb!8m2!3d-30.5773804!4d-71.1887003!16s%2Fg%2F11hsbqs2mm?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D'
     }
 ]
 
@@ -26,26 +27,14 @@ const socialIcons = [
         id: 1,
         title: 'Facebook',
         icon: <Facebook />,
-        href: ''
-    },
-    {
-        id: 2,
-        title: 'Twitter',
-        icon: <Twitter />,
-        href: ''
+        href: 'https://www.facebook.com/profile.php/?id=61558706391334&_rdr'
     },
     {
         id: 3,
         title: 'Instagram',
         icon: <Instagram />,
-        href: ''
+        href: 'https://www.instagram.com/kinesiomed.ovalle/'
     },
-    {
-        id: 4,
-        title: 'Youtube',
-        icon: <Youtube />,
-        href: ''
-    }
 ]
 
 export function ContactBar() {
@@ -54,19 +43,19 @@ export function ContactBar() {
             <div className="flex items-center gap-8">
                 {
                     contactBarItems.map((item, index) => (
-                        <span className={`${index === 2 && 'hidden sm:block'}`} key={item.id}>
+                        <Link href={item.href} className={`${index === 2 && 'hidden sm:block'}`} key={item.id}>
                         {item.title}
-                        </span>
+                        </Link>
                     ))
                 }
             </div>
             <div className="hidden lg:flex items-center gap-4">
                 {
                     socialIcons.map((item) => (
-                        <span className="" key={item.id}>
+                        <Link href={item.href} target="_blank" className="" key={item.id}>
                             {item.icon}
                         {/*{item.title}*/}
-                    </span>
+                    </Link>
                     ))
                 }
             </div>

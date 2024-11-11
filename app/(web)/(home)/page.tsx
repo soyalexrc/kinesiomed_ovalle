@@ -18,10 +18,10 @@ export default function Home() {
             <ServicesBanner />
             <ProudBanner />
             <WhyUsBanner />
-            <NeedAttentionBanner />
-            <TeamBanner />
+            {/*<NeedAttentionBanner />*/}
+            {/*<TeamBanner />*/}
             <TestimonialsBanner />
-            <BlogBanner />
+            {/*<BlogBanner />*/}
             <WhatsAppButton />
         </div>
     )
