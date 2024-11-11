@@ -1,10 +1,8 @@
 import {
-    AboutUsBanner, BlogBanner,
+    AboutUsBanner,
     Hero,
-    NeedAttentionBanner,
     ProudBanner,
     ServicesBanner,
-    TeamBanner,
     WhyUsBanner,
     TestimonialsBanner
 } from "@/components/home";

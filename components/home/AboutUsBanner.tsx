@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {Separator} from "@/components/ui/separator";
 
 export function AboutUsBanner() {
     return (

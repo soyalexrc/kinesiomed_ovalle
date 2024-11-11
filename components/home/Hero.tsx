@@ -1,27 +1,27 @@
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
 
-const data = [
-    {
-        image: '',
-        title: 'Experts Therapists',
-        text: 'Our team of licensed and certified physiotherapists',
-        id: 1,
-    },
-    {
-        image: '',
-        title: 'Emergency Service',
-        text: 'Our emergency physiotherapy services are designed to address',
-        id: 2,
-    },
-    {
-        image: '',
-        title: 'Free Consultant',
-        text: 'Our mission is to enhance the quality of life of our patients',
-        id: 3,
-    },
-
-]
+// const data = [
+//     {
+//         image: '',
+//         title: 'Experts Therapists',
+//         text: 'Our team of licensed and certified physiotherapists',
+//         id: 1,
+//     },
+//     {
+//         image: '',
+//         title: 'Emergency Service',
+//         text: 'Our emergency physiotherapy services are designed to address',
+//         id: 2,
+//     },
+//     {
+//         image: '',
+//         title: 'Free Consultant',
+//         text: 'Our mission is to enhance the quality of life of our patients',
+//         id: 3,
+//     },
+//
+// ]
 
 export function Hero() {
     return (
