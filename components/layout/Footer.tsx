@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter} from "lucide-react";
+import {Facebook, Instagram, Mail, MapPin, Phone} from "lucide-react";
 import {Separator} from "@/components/ui/separator";
 import Link from "next/link";
 
