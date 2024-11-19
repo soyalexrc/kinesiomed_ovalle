@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {Button} from "@/components/ui/button";
+import AppointmentButton from "@/components/AppointmentButton";
 
 // const data = [
 //     {
@@ -37,7 +37,7 @@ export function Hero() {
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                         {/*<Button variant="brandedSecondary" className="rounded-full px-6 py-4">Explore Services</Button>*/}
-                        <Button variant="brandedSecondary" className="rounded-full px-6 py-4">Agendar una cita</Button>
+                        <AppointmentButton text="Agendar una cita" className="rounded-full px-6 py-4" />
                     </div>
                 </div>
             </div>

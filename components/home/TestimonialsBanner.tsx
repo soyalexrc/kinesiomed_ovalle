@@ -6,7 +6,7 @@ const reviews = [
         id: 1,
         score: 5,
         text: '"La atención experta de Kinesiomed Ovalle me ayudó a recuperarme rápidamente de una lesión reciente. Muy recomendable."',
-        image: '',
+        image: '/testimonial-3.png',
         name: 'Dr. Carlos Ramirez',
         role: 'Cirujano'
     },
@@ -14,7 +14,7 @@ const reviews = [
         id: 2,
         score: 5,
         text: '"Alivió mi dolor de espalda crónico y mejoró mi bienestar general. Una gran experiencia."',
-        image: '',
+        image: '/testimonial-1.png',
         name: 'Sofia Perez',
         role: 'Profesora'
     },
@@ -22,7 +22,7 @@ const reviews = [
         id: 3,
         score: 5,
         text: '"Mejoró su postura y alivió el dolor. Personal amable y capacitado."',
-        image: '',
+        image: '/testimonial-2.png',
         name: 'Pablo Martinez',
         role: 'Consultor de TI'
     },
@@ -61,7 +61,7 @@ export function TestimonialsBanner() {
                                 <div className="flex gap-4">
                                     {
                                         testimonial.image ?
-                                            <div className="w-[56px] h-[56px] rounded-full bg-gray-200"/>
+                                            <Image src={testimonial.image} width={50} height={50} alt={testimonial.text} className="rounded-full h-[50px] object-cover" />
                                             :
                                             <div className="w-[56px] h-[56px] rounded-full bg-gray-200"/>
                                     }

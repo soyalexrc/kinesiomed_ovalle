@@ -40,11 +40,12 @@ const socialIcons = [
 export function ContactBar() {
     return (
         <div className="bg-brand text-white min-h-[40px] flex justify-center lg:justify-between items-center px-4 fixed top-0 w-full z-40">
-            <div className="flex items-center gap-8">
+            <div className="flex items-center flex-col md:flex-row gap-4 md:gap-8 py-2 md:p-0">
                 {
                     contactBarItems.map((item, index) => (
-                        <Link href={item.href} className={`${index === 2 && 'hidden sm:block'}`} key={item.id}>
-                        {item.title}
+                        <Link href={item.href} className={` flex items-center gap-2 ${index === 2 && 'hidden sm:block'}`} key={item.id}>
+                            {item.icon}
+                            <p className="text-lg sm:text-sm">{item.title}</p>
                         </Link>
                     ))
                 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter} from "lucide-react";
+import {Facebook, Instagram, Mail, MapPin, Phone} from "lucide-react";
 import {Separator} from "@/components/ui/separator";
 import Link from "next/link";
 
@@ -16,26 +16,28 @@ export function Footer() {
                             funcionalidad.
                         </p>
                         <div className="flex gap-4 mt-14">
-                            <Facebook/>
-                            <Twitter/>
-                            <Linkedin/>
-                            <Instagram/>
+                            <Link href="https://www.facebook.com/profile.php/?id=61558706391334&_rdr" target="_blank">
+                                <Facebook/>
+                            </Link>
+                            <Link href="https://www.instagram.com/kinesiomed.ovalle/" target="_blank">
+                                <Instagram/>
+                            </Link>
                         </div>
                     </div>
                     <div className="mb-8 lg:mb-0 col-span-12 md:col-span-4 lg:col-span-3">
-                        <h6 className="text-xl font-bold mb-4">Working Hours</h6>
+                        <h6 className="text-xl font-bold mb-4">Horario de Atencion</h6>
                         <ul className="flex flex-col gap-4">
-                            <li className="text-sm">Mon To Fri: 10:00 AM To 6:00 PM</li>
-                            <li className="text-sm">Sat: 10:00 AM To 3:00 PM</li>
-                            <li className="text-sm">Sun: Closed</li>
+                            <li className="text-sm">Lun A Vie: 10:00 AM A 6:00 PM</li>
+                            <li className="text-sm">Sab: 10:00 AM A 3:00 PM</li>
+                            <li className="text-sm">Dom: Cerrado</li>
                         </ul>
                     </div>
                     <div className="mb-8 lg:mb-0 col-span-12 md:col-span-4 lg:col-span-3">
-                        <h6 className="text-xl font-bold mb-4">More Services</h6>
+                        <h6 className="text-xl font-bold mb-4">Mas Servicios</h6>
                         <ul className="flex flex-col gap-4">
-                            <li className="text-sm">Manual Therapy</li>
-                            <li className="text-sm">Chronic Pain</li>
-                            <li className="text-sm">Hand Therapy</li>
+                            {/*<li className="text-sm">Terapia Manual</li>*/}
+                            {/*<li className="text-sm">Dolor Cronico</li>*/}
+                            {/*<li className="text-sm">Terapia de mano</li>*/}
                         </ul>
                     </div>
                     <div className="mb-8 lg:mb-0 col-span-12 md:col-span-4 lg:col-span-3">
