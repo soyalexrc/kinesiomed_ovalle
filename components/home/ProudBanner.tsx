@@ -11,20 +11,20 @@ const stats = [
     {
         id: 1,
         title: '1200+',
-        text: 'Pacientes tratados anualmente',
-        icon: '',
+        text: 'Pacientes / año',
+        icon: '/icons/doctor.svg',
     },
     {
         id: 2,
         title: '98%',
         text: 'Tasa de mejora',
-        icon: '',
+        icon: '/icons/success-rate.svg',
     },
     {
         id: 3,
         title: '700+',
-        text: 'Planes de tratamiento exitosos',
-        icon: '',
+        text: 'Tratamientos ',
+        icon: '/icons/treatments.svg',
     },
 ]
 
@@ -67,11 +67,13 @@ export function ProudBanner() {
 
                     <Separator className="my-10"/>
 
-                    <div className="grid grid-cols-3">
+                    <div className="grid grid-cols-3 gap-10 md:gap-1">
                         {
                             stats.map((stat) => (
                                 <div key={stat.id} className="flex items-center gap-4 col-span-3 sm:col-span-1">
-                                    <div className="bg-brandSecondary/10 rounded-xl w-[50px] h-[50px]"/>
+                                    {/*<div className="flex justify-center items-center bg-brandSecondary/10 rounded-xl w-[50px] h-[50px]">*/}
+                                        <Image src={stat.icon} alt={stat.title} width={40} height={40}/>
+                                    {/*</div>*/}
                                     <div>
                                         <h5 className="text-xl text-brand">{stat.title}</h5>
                                         <p>{stat.text}</p>
