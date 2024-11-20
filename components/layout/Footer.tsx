@@ -27,8 +27,8 @@ export function Footer() {
                     <div className="mb-8 lg:mb-0 col-span-12 md:col-span-4 lg:col-span-3">
                         <h6 className="text-xl font-bold mb-4">Horario de Atencion</h6>
                         <ul className="flex flex-col gap-4">
-                            <li className="text-sm">Lun A Vie: 10:00 AM A 6:00 PM</li>
-                            <li className="text-sm">Sab: 10:00 AM A 3:00 PM</li>
+                            <li className="text-sm">Lun A Vie: 9:00 AM A 6:00 PM</li>
+                            <li className="text-sm">Sab: 9:00 AM A 1:00 PM</li>
                             <li className="text-sm">Dom: Cerrado</li>
                         </ul>
                     </div>
