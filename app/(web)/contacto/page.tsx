@@ -3,6 +3,7 @@ import Image from "next/image";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
+import {Metadata} from "next";
 
 const data = [
     {
@@ -30,6 +31,14 @@ const data = [
         text: 'Lun A Vie: 9:00 AM A 6:00 PM. Sab: 9:00 AM A 1:00 PM, Dom: Cerrado'
     }
 ]
+
+export const metadata: Metadata = {
+    title: 'Contacto',
+    description: '¿Tienes alguna duda o quieres agendar una cita? Completa nuestro formulario de contacto y nos pondremos en contacto contigo a la brevedad.',
+    keywords: [
+        'contacto', 'kinesiología', 'agendar cita', 'Concon', 'Ovalle', 'formulario de contacto'
+    ]
+}
 
 export default function Page() {
     return (
@@ -72,11 +81,11 @@ export default function Page() {
                         <h2 className="text-3xl md:text-6xl text-brandSecondary">con Nosotros</h2>
 
                         <div className="grid grid-cols-2 gap-6 mt-10">
-                            <Input type="text" className="h-[50px]" placeholder="Ingresar Nombre" />
-                            <Input type="email" className="h-[50px]" placeholder="Ingresar Correo" />
-                            <Input type="text" className="h-[50px]" placeholder="Ingresar Numero de Telefono" />
-                            <Input type="text" className="h-[50px]" placeholder="Ingresar Asunto" />
-                            <Textarea className="col-span-2" rows={5} placeholder="Tu Mensaje" />
+                            <Input type="text" className="h-[50px]" placeholder="Ingresar Nombre"/>
+                            <Input type="email" className="h-[50px]" placeholder="Ingresar Correo"/>
+                            <Input type="text" className="h-[50px]" placeholder="Ingresar Numero de Telefono"/>
+                            <Input type="text" className="h-[50px]" placeholder="Ingresar Asunto"/>
+                            <Textarea className="col-span-2" rows={5} placeholder="Tu Mensaje"/>
                         </div>
 
                         <Button variant="branded" className="w-full mt-10">

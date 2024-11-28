@@ -3,6 +3,7 @@ import AppointmentButton from "@/components/AppointmentButton";
 import {ArrowRight} from "lucide-react";
 import {TestimonialsBanner, WhyUsBanner} from "@/components/home";
 import Link from "next/link";
+import {Metadata} from "next";
 
 const data = [
     {
@@ -50,6 +51,15 @@ const data = [
         ctaText: 'Agendar una cita',
     },
 ]
+
+export const metadata: Metadata = {
+    title: 'Servicios',
+    description: ' Ofrecemos una amplia gama de servicios de kinesiología para ayudarte a recuperar tu movilidad y bienestar. ¡Conoce todos nuestros tratamientos!',
+    keywords: [
+        'rehabilitación', 'kinesiología', 'equipo profesional', 'Concon', 'Ovalle', 'centro de rehabilitación', 'tratamientos', 'fisioterapia'
+    ]
+}
+
 
 
 export default function Page() {
