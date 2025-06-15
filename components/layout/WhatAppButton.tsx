@@ -1,9 +1,15 @@
 'use client';
+import { ContactLocation, trackContactClick } from "@/lib/tag-manager/methods";
 import Image from "next/image";
 
-export default function WhatsAppButton() {
+type Props = {
+    location: ContactLocation;
+}
+
+export default function WhatsAppButton({location}: Props) {
 
     const handleWhatsAppClick = () => {
+        trackContactClick('whatsapp', location)
         const whatsappUrl = "https://wa.me/"; // Base URL
         const phoneNumber = "+56942757447"; // Replace with your phone number
         const message = "?text=Hola! Me gustaria saber mas informacion sobre sus servicios."; // Optional pre-filled message

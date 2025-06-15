@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import {Button} from "@/components/ui/button";
 import MenuButton from "@/app/(web)/MenuButton";
 import {NavbarItem} from "@/lib/interfaces/Menu";
+import CallButton from "./call-button";
 
 const navbarItems: NavbarItem[] = [
     {
@@ -45,11 +45,7 @@ export function Navbar() {
                     </Link>
                 ))}
             </div>
-            <Button variant="brandedSecondary" className="hidden md:block rounded-full">
-                <Link href="tel:+56942757447">
-                    +(56) 9 4275 7447
-                </Link>
-            </Button>
+            <CallButton location="header" type="filled"  />   
             <MenuButton items={navbarItems} />
         </div>
     )

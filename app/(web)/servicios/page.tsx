@@ -4,6 +4,8 @@ import {ArrowRight} from "lucide-react";
 import {TestimonialsBanner, WhyUsBanner} from "@/components/home";
 import Link from "next/link";
 import {Metadata} from "next";
+import WhatsAppButton from "@/components/layout/WhatAppButton";
+import ViewTracker from "@/lib/tag-manager/components/view-tracker";
 
 const data = [
     {
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <div>
+        <div className="relative">
             <div className="bg-brandSecondary/10 h-[300px] flex flex-col justify-center items-center gap-5">
                 <h1 className="text-6xl ">Servicios</h1>
                 <div className="flex gap-5">
@@ -101,8 +103,11 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <TestimonialsBanner/>
-            <WhyUsBanner/>
+            {/* <TestimonialsBanner/> */}
+            {/* <WhyUsBanner/> */}
+            <WhatsAppButton location="home_page" />
+            <ViewTracker pageName="service_page" serviceType={null} />
+            
         </div>
     )
 }

@@ -1,19 +1,10 @@
-import {Facebook, Instagram, Phone} from "lucide-react";
+import {Facebook, Instagram, Mail, MapPin, Phone} from "lucide-react";
 import Link from "next/link";
+import CallButton from "./call-button";
+import EmailButton from "../email-button";
+import LocationButton from "../location-button";
 
 const contactBarItems = [
-    {
-        id: 1,
-        title: '+(56) 9 4275 7447',
-        icon: <Phone /> ,
-        href: 'tel:+56942757447'
-    },
-    {
-        id: 2,
-        title: 'contacto@kinesiomedovalle.com',
-        icon: '',
-        href: 'mailto:contacto@kinesiomedovalle.com'
-    },
     {
         id: 3,
         title: 'Av. Manuel Peñafiel 1480, oficina 420',
@@ -41,14 +32,9 @@ export function ContactBar() {
     return (
         <div className="bg-brand text-white min-h-[40px] flex justify-center lg:justify-between items-center px-4 fixed top-0 w-full z-40">
             <div className="flex items-center flex-col md:flex-row gap-4 md:gap-8 py-2 md:p-0">
-                {
-                    contactBarItems.map((item, index) => (
-                        <Link href={item.href} className={` flex items-center gap-2 ${index === 2 && 'hidden sm:block'}`} key={item.id}>
-                            {item.icon}
-                            <p className="text-lg sm:text-sm">{item.title}</p>
-                        </Link>
-                    ))
-                }
+                <CallButton location="header" type="ghost" icon={<Phone />}  />   
+                <EmailButton type="ghost" location="header" icon={<Mail />} /> 
+                <LocationButton type="ghost" location="header" icon={<MapPin />} />
             </div>
             <div className="hidden lg:flex items-center gap-4">
                 {

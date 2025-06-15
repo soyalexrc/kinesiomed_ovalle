@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AppointmentButton from "@/components/AppointmentButton";
+import { Calendar } from "lucide-react";
 
 // const data = [
 //     {
@@ -37,7 +38,7 @@ export function Hero() {
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                         {/*<Button variant="brandedSecondary" className="rounded-full px-6 py-4">Explore Services</Button>*/}
-                        <AppointmentButton variant="brandedSecondaryLight" text="Agendar una cita" className="rounded-full px-6 py-4 font-bold" />
+                        <AppointmentButton variant="brandedSecondaryLight" icon={<Calendar />} text="Agendar una cita" className="rounded-full flex items-center gap-2 px-6 py-4 font-bold text-lg" />
                     </div>
                 </div>
             </div>
