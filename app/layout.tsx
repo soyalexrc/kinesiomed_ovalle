@@ -4,6 +4,8 @@ import {Archivo} from 'next/font/google'
 import "./globals.css";
 import {cn} from "@/lib/utils";
 import Script from "next/script";
+import { GoogleTagManager } from '@next/third-parties/google'
+
 
 const archivo = Archivo({subsets: ['latin']})
 
@@ -62,8 +64,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es">
+            <GoogleTagManager gtmId="GTM-PTSNSM5S" />
         <body>
-            <Script
+            {/* <Script
                 id="gtm-script"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
@@ -75,12 +78,12 @@ export default function RootLayout({
                         })(window,document,'script','dataLayer','GTM-PTSNSM5S');
                     `,
                 }}
-            />
+            /> */}
                    {/* NoScript fallback */}
-                <noscript>
-                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTSNSM5S"
-                height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe>
-                </noscript>
+                {/* <noscript> */}
+                    {/* <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTSNSM5S" */}
+                {/* height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe> */}
+                {/* </noscript> */}
 
         <main className={cn('min-h-screen bg-background antialiased overflow-x-hidden', archivo.className)}>
             {children}

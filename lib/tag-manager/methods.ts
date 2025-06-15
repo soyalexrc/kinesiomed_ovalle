@@ -1,9 +1,5 @@
+import { sendGTMEvent } from '@next/third-parties/google'
 
-declare global {
-  interface Window {
-    dataLayer?: object[];
-  }
-}
 
 // GTM Tracking Strategy for Physical Therapy Website in Chile
 
@@ -15,9 +11,10 @@ export type ContactType = 'whatsapp' | 'phone' | 'chat' | 'email' | 'location';
 
 // Contact Button Clicks (High Priority)
 export const trackContactClick = (contactType: ContactType, location: ContactLocation) => {
-  window.dataLayer?.push({
+  sendGTMEvent({
     event: 'contact_click',
     contact_type: contactType, // 'whatsapp', 'phone', 'chat'
+    value: contactType,
     click_location: location,  // 'header', 'footer', 'service_page', 'contact_page'
     event_category: 'engagement',
     event_label: `${contactType}_${location}`
@@ -26,9 +23,10 @@ export const trackContactClick = (contactType: ContactType, location: ContactLoc
 
 // Service Interest Tracking
 export const trackServiceView = (serviceName: string, serviceCategory: string) => {
-  window.dataLayer?.push({
+  sendGTMEvent({
     event: 'service_view',
     service_name: serviceName,
+    value: serviceName,
     service_category: serviceCategory, // 'rehabilitation', 'sports_therapy', 'pain_management'
     event_category: 'service_engagement'
   })
@@ -36,9 +34,10 @@ export const trackServiceView = (serviceName: string, serviceCategory: string) =
 
 // Page Views with Service Context
 export const trackPageView = (pageName: string, serviceType: string | null = null) => {
-  window.dataLayer?.push({
+  sendGTMEvent({
     event: 'page_view',
     page_name: pageName,
+    value: pageName,
     service_type: serviceType,
     page_category: 'content_view'
   })
@@ -47,27 +46,30 @@ export const trackPageView = (pageName: string, serviceType: string | null = nul
 
 // Scroll Depth Tracking
 export const trackScrollDepth = (percentage: number) => {
-  window.dataLayer?.push({
+  sendGTMEvent({
     event: 'scroll_depth',
     scroll_percentage: percentage,
+    value: percentage,
     page_name: window.location.pathname
   })
 }
 
 // Time on Page Tracking
 export const trackTimeOnPage = (timeSpent: number) => {
-  window.dataLayer?.push({
+  sendGTMEvent({
     event: 'time_on_page',
     time_spent_seconds: timeSpent,
+    value: timeSpent,
     page_name: window.location.pathname
   })
 }
 
 // Form Interactions (if you have contact forms)
-export const trackFormInteraction = (formName: 'string', action: 'start' | 'submit' | 'abandon') => {
-  window.dataLayer?.push({
+export const trackFormInteraction = (formName: string, action: 'start' | 'submit' | 'abandon') => {
+  sendGTMEvent({
     event: 'form_interaction',
     form_name: formName,
+    value: formName,
     form_action: action, // 'start', 'submit', 'abandon'
     event_category: 'form_engagement'
   })
@@ -75,7 +77,7 @@ export const trackFormInteraction = (formName: 'string', action: 'start' | 'subm
 
 // Generic event tracker
 export const trackEvent = (eventName: string, parameters = {}) => {
-  window.dataLayer?.push({
+  sendGTMEvent({
     event: eventName,
     ...parameters,
     timestamp: new Date().toISOString()
@@ -84,7 +86,7 @@ export const trackEvent = (eventName: string, parameters = {}) => {
 
 // Location-based tracking (for Chilean context)
 export const trackLocationInterest = (city: string, region: string) => {
-  window.dataLayer?.push({
+  sendGTMEvent({
     event: 'location_interest',
     city: city,
     region: region,
