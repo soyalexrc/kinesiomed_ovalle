@@ -3,7 +3,6 @@ import type {Metadata} from "next";
 import {Archivo} from 'next/font/google'
 import "./globals.css";
 import {cn} from "@/lib/utils";
-import Script from "next/script";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 
