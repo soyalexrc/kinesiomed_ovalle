@@ -4,7 +4,7 @@ import {
     ProudBanner,
     ServicesBanner,
     WhyUsBanner,
-    TestimonialsBanner
+    TestimonialsCarousel
 } from "@/components/home";
 import WhatsAppButton from "@/components/layout/WhatAppButton";
 import ViewTracker from "@/lib/tag-manager/components/view-tracker";
@@ -19,7 +19,7 @@ export default function Home() {
             <WhyUsBanner />
             {/*<NeedAttentionBanner />*/}
             {/*<TeamBanner />*/}
-            <TestimonialsBanner />
+            <TestimonialsCarousel />
             <ViewTracker pageName="home_page" serviceType={null} />
             {/*<BlogBanner />*/}
             <WhatsAppButton location="home_page" />

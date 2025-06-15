@@ -6,4 +6,5 @@ export * from './TeamBanner';
 export * from './ServicesBanner';
 export * from './WhyUsBanner';
 export * from './TestimonialsBanner';
+export * from './TestimonialsCarousel';
 export * from './ProudBanner';
