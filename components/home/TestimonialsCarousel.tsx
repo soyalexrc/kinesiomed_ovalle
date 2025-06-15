@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState, useCallback, useRef } from "react";
+import { Button } from "../ui/button";
 
 type Review = {
     id: number;
@@ -101,10 +102,16 @@ export function TestimonialsCarousel() {
         fetchTestimonials();
     }, []);
 
+    function handleRedirectReview() {
+        const url = `https://search.google.com/local/writereview?placeid=${process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID}`;
+        window.open(url, '_blank');
+    }
+
     return (
+        <div className="bg-brand/30">
         <div className="relative h-auto py-20 md:h-[750px] w-full flex items-center justify-center overflow-hidden">
             <Image src="/testimonial-bg.svg" fill alt="" className="object-cover"/>
-            <div className="absolute top-0 left-0 w-full h-full bg-brand/30"/>
+            <div className="absolute top-0 left-0 w-full h-full"/>
             <div className="z-20 flex px-4 md:px-6 lg:px-10 flex-col items-center max-w-[1400px] w-full">
                 <span className="rounded-full bg-brandSecondary px-4 py-2 text-white">Reseñas</span>
                 <h3 className="text-3xl md:text-6xl text-white my-10 text-center">Lo que <span className="text-brand">Dicen Nuestros Pacientes</span>
@@ -242,6 +249,14 @@ export function TestimonialsCarousel() {
                     )}
                 </div>
             </div>
+        </div>
+        <div className="flex items-center justify-center gap-2 mx-auto pb-10">
+            <Button onClick={handleRedirectReview} size="lg" variant="branded" className="flex items-center justify-center gap-2 mx-auto h-[70px] rounded-2xl">
+                <Image src="/icons/g-logo.png" width={50} height={50} alt="google logo" />
+                <p className="text-3xl">Dejanos saber tu experiencia!</p>
+            </Button>
+        </div>
+       
         </div>
     );
 }
