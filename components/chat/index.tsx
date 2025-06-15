@@ -55,7 +55,7 @@ export default function Chat() {
     if (
       parsed.type === 'servicio' &&
       Array.isArray(parsed.options) &&
-      parsed.options.every((opt: any) => typeof opt === 'string')
+      parsed.options.every((opt: string) => typeof opt === 'string')
     ) {
       return {
         text: messageText,
@@ -65,7 +65,8 @@ export default function Chat() {
       // JSON is not in expected format
       return { text: raw.trim() };
     }
-  } catch (err) {
+  } catch (error) {
+    console.error('Failed to parse JSON:', error);
     // JSON parsing failed
     return { text: raw.trim() };
   }
