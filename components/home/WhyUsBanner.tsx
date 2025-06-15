@@ -54,8 +54,8 @@ export function WhyUsBanner() {
                 </div>
 
                 <div className="grid grid-cols-2 mt-12 relative">
-                    <div className="hidden md:block w-[370px] h-[540px] absolute"
-                         style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                    <div className="hidden md:block  md:w-[230px] md:h-[400px] md:top-[63%] xl:top-[50%] xl:w-[370px] xl:h-[540px] absolute"
+                         style={{left: '50%', transform: 'translate(-50%, -50%)'}}>
                         <Image src="/why-us.png" fill alt="why us"/>
                     </div>
                     {data.map((item, index) => (

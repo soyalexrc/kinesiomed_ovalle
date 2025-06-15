@@ -9,12 +9,12 @@ export function Footer() {
             <div className="px-10 md:px-20 py-12 max-w-[1400px] w-full">
                 <div className="text-white grid grid-cols-12 lg:gap-20">
                     <div className="mb-8 lg:mb-0 col-span-12 lg:col-span-3">
-                        <Image src="/kinesiomed-logo.svg" alt="logo" width={100} height={50} className="mb-2"/>
-                        <p className="text-sm">
+                        <Image src="/kinesiomed-logo.svg" alt="logo" width={250} height={200} className="mb-2"/>
+                        {/* <p className="text-sm">
                             Kinesiomed Ovalle: Tu bienestar es nuestra prioridad. Recuperación física personalizada para
                             mejorar tu calidad de vida. Aliviamos el dolor, restablecemos la movilidad y optimizamos tu
                             funcionalidad.
-                        </p>
+                        </p> */}
                         <div className="flex gap-4 mt-14">
                             <Link href="https://www.facebook.com/profile.php/?id=61558706391334&_rdr" target="_blank">
                                 <Facebook/>
@@ -35,9 +35,9 @@ export function Footer() {
                     <div className="mb-8 lg:mb-0 col-span-12 md:col-span-4 lg:col-span-3">
                         <h6 className="text-xl font-bold mb-4">Mas Servicios</h6>
                         <ul className="flex flex-col gap-4">
-                            {/*<li className="text-sm">Terapia Manual</li>*/}
-                            {/*<li className="text-sm">Dolor Cronico</li>*/}
-                            {/*<li className="text-sm">Terapia de mano</li>*/}
+                            <li className="text-sm">Kinesiologia convencional</li>
+                            {/* <li className="text-sm">Dolor Cronico</li> */}
+                            {/* <li className="text-sm">Terapia de mano</li> */}
                         </ul>
                     </div>
                     <div className="mb-8 lg:mb-0 col-span-12 md:col-span-4 lg:col-span-3">

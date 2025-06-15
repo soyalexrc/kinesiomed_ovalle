@@ -1,12 +1,14 @@
 'use client'
-import {Button} from "@/components/ui/button";
+import {Button, ButtonProps} from "@/components/ui/button";
 
 type Props = {
     text: string;
     className?: string;
+    variant?: ButtonProps['variant'];
+    icon?: React.ReactNode;
 }
 
-export default function AppointmentButton({ text, className }: Props) {
+export default function AppointmentButton({ text, className, variant = 'brandedSecondary', icon }: Props) {
     const handleWhatsAppClick = () => {
         const whatsappUrl = "https://wa.me/"; // Base URL
         const phoneNumber = "+56942757447"; // Replace with your phone number
@@ -15,6 +17,9 @@ export default function AppointmentButton({ text, className }: Props) {
         window.open(completeUrl, "_blank"); // Open in a new tab
     };
     return (
-        <Button onClick={handleWhatsAppClick} variant="brandedSecondary" className={`${className}`}>{text}</Button>
+        <Button onClick={handleWhatsAppClick} variant={variant} className={`${className}`}>
+            {icon && icon}
+            {text}
+        </Button>
     );
 }

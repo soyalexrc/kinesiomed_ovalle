@@ -6,7 +6,6 @@ import {
     WhyUsBanner,
     TestimonialsBanner
 } from "@/components/home";
-import WhatsAppButton from "@/components/layout/WhatAppButton";
 
 export default function Home() {
     return (
@@ -20,7 +19,6 @@ export default function Home() {
             {/*<TeamBanner />*/}
             <TestimonialsBanner />
             {/*<BlogBanner />*/}
-            <WhatsAppButton />
         </div>
     )
 }

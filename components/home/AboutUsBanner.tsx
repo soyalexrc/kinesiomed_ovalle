@@ -9,8 +9,8 @@ export function AboutUsBanner() {
                 </div>
                 <div className="col-span-12 md:col-span-7">
                     <span className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Acerca de nosotros</span>
-                    <h2 className="text-3xl md:text-6xl mt-5 text-brand">Nosotros somos los mejores en</h2>
-                    <h2 className="text-3xl md:text-6xl text-brandSecondary">Fisioterapia</h2>
+                    <h2 className="text-3xl md:text-6xl mt-5 text-brand">Nuestro objetivo</h2>
+                    <h2 className="text-3xl md:text-6xl text-brandSecondary">Recuperar tu bienestar</h2>
                     <p className="text-md my-6">
                         Somos apasionados por tu bienestar. Con años de experiencia en el campo de la fisioterapia,
                         nuestro equipo altamente capacitado está dedicado a brindarte un cuidado personalizado y eficaz.
