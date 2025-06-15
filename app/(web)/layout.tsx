@@ -1,4 +1,6 @@
 import {ContactBar, Footer, Navbar} from "@/components/layout";
+import Chat from "@/components/chat";
+import WhatsAppButton from "@/components/layout/WhatAppButton";
 
 export default function WebLayout({
                                       children,
@@ -10,6 +12,8 @@ export default function WebLayout({
             <ContactBar/>
             <Navbar/>
             {children}
+            <Chat />
+            <WhatsAppButton />
             <Footer/>
         </div>
     );

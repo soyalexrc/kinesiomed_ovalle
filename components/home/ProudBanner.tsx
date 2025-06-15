@@ -1,11 +1,11 @@
 import Image from "next/image";
 import {Separator} from "@/components/ui/separator";
 
-const bullets = [
-    {id: 1, text: "Planes de tratamiento personalizados."},
-    {id: 2, text: "Resultados tangibles."},
-    {id: 3, text: "Equipo de expertos."}
-]
+// const bullets = [
+//     {id: 1, text: "Planes de tratamiento personalizados."},
+//     {id: 2, text: "Resultados tangibles."},
+//     {id: 3, text: "Equipo de expertos."}
+// ]
 
 const stats = [
     {
@@ -44,26 +44,26 @@ export function ProudBanner() {
                     <span
                         className="rounded-full bg-brandSecondary/10 text-brand px-4 py-2">Solucion a tu plan</span>
                     <div className="my-12">
-                        <h3 className="text-3xl md:text-6xl text-brandSecondary">Nos orgullece <span
-                            className="text-brand">dar</span>
+                        <h3 className="text-3xl md:text-6xl text-brandSecondary">Nos orgullece dar tratamientos de calidad <span
+                            className="text-brand">y</span>
                         </h3>
-                        <h3 className="text-3xl md:text-6xl text-brand">Tratamientos de calidad</h3>
+                        <h3 className="text-3xl md:text-6xl text-brand">obtener resultados óptimos en cada paciente.</h3>
                     </div>
-                    <p className="text-md mb-12">
+                    {/* <p className="text-md mb-12">
                         Cada persona es única, y así también lo son sus necesidades. En Kinesiomed Ovalle, diseñamos
                         planes de tratamiento personalizados para abordar tus dolencias de manera eficaz. Nuestro
                         objetivo es brindarte la solución más adecuada para que puedas recuperar tu movilidad y
                         bienestar lo antes posible. Con tratamientos de calidad y un seguimiento cercano, te ayudaremos
                         a alcanzar tus metas
-                    </p>
+                    </p> */}
 
-                    <ul className="flex flex-col gap-4">
+                    {/* <ul className="flex flex-col gap-4">
                         {bullets.map((bullet) => (
                             <li key={bullet.id}>
                                 {bullet.text}
                             </li>
                         ))}
-                    </ul>
+                    </ul> */}
 
                     <Separator className="my-10"/>
 
