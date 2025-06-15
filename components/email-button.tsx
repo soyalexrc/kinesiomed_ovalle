@@ -1,7 +1,6 @@
 'use client';
 import { trackContactClick } from "@/lib/tag-manager/methods";
 import { Button } from "./ui/button";
-import { Mail } from "lucide-react";
 
 type Props = {
     type: 'filled' | 'ghost';

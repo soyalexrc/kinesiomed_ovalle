@@ -4,15 +4,6 @@ import CallButton from "./call-button";
 import EmailButton from "../email-button";
 import LocationButton from "../location-button";
 
-const contactBarItems = [
-    {
-        id: 3,
-        title: 'Av. Manuel Peñafiel 1480, oficina 420',
-        icon: '',
-        href: 'https://www.google.com/maps/place/Av.+Manuel+Pe%C3%B1afiel+Olivares+1480,+1840000+Ovalle,+Coquimbo,+Chile/@-30.5776132,-71.1883604,17z/data=!4m6!3m5!1s0x968fcab5ad8384fb:0x2542ea5874c314fb!8m2!3d-30.5773804!4d-71.1887003!16s%2Fg%2F11hsbqs2mm?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D'
-    }
-]
-
 const socialIcons = [
     {
         id: 1,

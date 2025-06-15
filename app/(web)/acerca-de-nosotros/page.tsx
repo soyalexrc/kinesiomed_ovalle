@@ -1,4 +1,4 @@
-import {AboutUsBanner, ProudBanner, TestimonialsBanner} from "@/components/home";
+import {AboutUsBanner} from "@/components/home";
 import Link from "next/link";
 import {Metadata} from "next";
 import WhatsAppButton from "@/components/layout/WhatAppButton";

@@ -1,7 +1,6 @@
 'use client';
 import { Button } from "./ui/button";
 import { trackContactClick } from "@/lib/tag-manager/methods";
-import { MapPin } from "lucide-react";
 
 type Props = {
     type: 'filled' | 'ghost';

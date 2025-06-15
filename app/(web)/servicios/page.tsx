@@ -1,7 +1,7 @@
 import Image from "next/image";
 import AppointmentButton from "@/components/AppointmentButton";
 import {ArrowRight} from "lucide-react";
-import {TestimonialsBanner, WhyUsBanner} from "@/components/home";
+// import {TestimonialsBanner, WhyUsBanner} from "@/components/home";
 import Link from "next/link";
 import {Metadata} from "next";
 import WhatsAppButton from "@/components/layout/WhatAppButton";
