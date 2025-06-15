@@ -1,3 +1,4 @@
+import AdBanner from "@/components/ad-banner";
 import {
     AboutUsBanner,
     Hero,
@@ -23,6 +24,7 @@ export default function Home() {
             <ViewTracker pageName="home_page" serviceType={null} />
             {/*<BlogBanner />*/}
             <WhatsAppButton location="home_page" />
+            <AdBanner />    
         </div>
     )
 }
