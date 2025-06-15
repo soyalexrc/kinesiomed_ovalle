@@ -4,17 +4,6 @@ export function TestimonialsBanner() {
     return <TestimonialsCarousel />;
 }
 
-type Review = {
-    id: number;
-    text: string;
-    relative_time_description: string;
-    time: number;
-    rating: number;
-    profile_photo_url: string;
-    author_name: string;
-    author_url: string;
-}
-
 // export function TestimonialsBanner() {
 //     const [reviews, setReviews] = useState<Review[]>([]);
 //     const [currentSlide, setCurrentSlide] = useState(0);
@@ -83,7 +72,7 @@ type Review = {
 //             if (!response.ok) {
 //                 throw new Error(`HTTP error! status: ${response.status}`);
 //             }
-           
+
 //             const data = await response.json();
 //             setReviews(data.reviews || []);
 //         } catch (error) {
@@ -113,32 +102,32 @@ type Review = {
 //                 {/* Carousel container */}
 //                 <div className="relative w-full">
 //                     {/* Carousel */}
-//                     <div 
+//                     <div
 //                         className="w-full overflow-hidden"
 //                         onTouchStart={handleTouchStart}
 //                         onTouchMove={handleTouchMove}
 //                         onTouchEnd={handleTouchEnd}
 //                     >
-//                         <div 
+//                         <div
 //                             className="flex transition-transform duration-500 ease-in-out"
 //                             style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}
 //                         >
 //                             {reviews.map((testimonial) => (
-//                                 <div 
+//                                 <div
 //                                     key={testimonial.id}
 //                                     className={`flex-shrink-0 transition-all duration-300 px-4 w-full ${
-//                                         slidesToShow === 1 
-//                                             ? 'w-full' 
-//                                             : slidesToShow === 2 
-//                                                 ? 'w-1/2' 
+//                                         slidesToShow === 1
+//                                             ? 'w-full'
+//                                             : slidesToShow === 2
+//                                                 ? 'w-1/2'
 //                                                 : 'w-1/3'
 //                                     }`}
 //                                 >
 //                                     <div className="h-full bg-white rounded-2xl p-8 flex flex-col justify-between">
 //                                         <div className="flex gap-2">
 //                                             {Array.from(Array(5).keys()).map((score) => (
-//                                                 <Star 
-//                                                     size={18} 
+//                                                 <Star
+//                                                     size={18}
 //                                                     key={score}
 //                                                     className={`text-yellow-500 ${score < testimonial.rating && 'fill-yellow-500'}`}
 //                                                 />
@@ -147,12 +136,12 @@ type Review = {
 //                                         <p className="text-sm leading-6 my-6 line-clamp-4">{testimonial.text}</p>
 //                                         <div className="flex gap-4">
 //                                             {testimonial.profile_photo_url ? (
-//                                                 <Image 
-//                                                     src={testimonial.profile_photo_url} 
-//                                                     width={50} 
-//                                                     height={50} 
-//                                                     alt={testimonial.text} 
-//                                                     className="rounded-full h-[50px] w-[50px] object-cover" 
+//                                                 <Image
+//                                                     src={testimonial.profile_photo_url}
+//                                                     width={50}
+//                                                     height={50}
+//                                                     alt={testimonial.text}
+//                                                     className="rounded-full h-[50px] w-[50px] object-cover"
 //                                                 />
 //                                             ) : (
 //                                                 <div className="w-[50px] h-[50px] rounded-full bg-gray-200"/>
@@ -169,14 +158,14 @@ type Review = {
 //                     </div>
 
 //                     {/* Navigation buttons */}
-//                     <button 
+//                     <button
 //                         onClick={prevSlide}
 //                         className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-0 md:-translate-x-6 bg-white rounded-full p-2 shadow-md z-10"
 //                         aria-label="Previous testimonial"
 //                     >
 //                         <ChevronLeft className="h-6 w-6 text-brand" />
 //                     </button>
-//                     <button 
+//                     <button
 //                         onClick={nextSlide}
 //                         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-0 md:translate-x-6 bg-white rounded-full p-2 shadow-md z-10"
 //                         aria-label="Next testimonial"
